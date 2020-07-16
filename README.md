@@ -18,7 +18,7 @@ to B (exclusive) at intervals of C to the standard output.
 It was created to use in bash for loops.
 
 ```sh
-for i in $(range 1024 10000 1024); do
+for i in $(range 1024 5000 1024); do
     echo $i
 done
 ```
@@ -26,7 +26,10 @@ done
 produces
 
 ```sh
-1024 2048 3072 4096 5120 6144 7168 8192 9216
+1024
+2048
+3072
+4096
 ```
 
 ## Build
