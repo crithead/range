@@ -1,6 +1,6 @@
 # Range
 
-A tool for shell scripts that acts Python's range.
+A tool for shell scripts that acts like Python's range.
 
 Print a space-separated list of numbers from A (inclusive)
 to B (exclusive) at intervals of C to the standard output.
