@@ -1,3 +1,5 @@
 build/
 *.swp
 *~
+*.deb
+*.1
