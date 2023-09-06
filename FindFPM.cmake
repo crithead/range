@@ -1,9 +1,11 @@
 # Find fpm -- this module looks for fpm
+# Note: Install with
+#   sudo gem install fpm
 #
 # FPM_EXECUTABLE - the full path to FPM
 # FPM_FOUND - If false, don't attempt to use FPM.
 
-FIND_PROGRAM(FPM_EXECUTABLE fpm)
+FIND_PROGRAM(FPM_EXECUTABLE NAMES fpm PATHS /usr/local/bin)
 MARK_AS_ADVANCED(FPM_EXECUTABLE)
 
 IF (NOT FPM_EXECUTABLE)
