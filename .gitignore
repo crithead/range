@@ -3,3 +3,4 @@ build/
 *~
 *.deb
 *.1
+!range.1

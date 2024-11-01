@@ -1,0 +1,54 @@
+.TH RANGE 1 2024-10-31 Utility Commands
+.SH NAME
+range \- print a range of numbers
+.SH SYNOPSIS
+.B range
+\fBB\fR | \fBA B\fR | \fBA B C\fR
+[ \fB\-h\fR | \fB\-\-help\fR ]
+.SH DESCRIPTION
+.B range
+prints a space-separated list of numbers from A (inclusive) to
+B (exclusive) at intervals of C to the standard output.
+.SH OPTIONS
+.TP
+.BR A
+start of range (default = 0)
+.TP
+.BR B
+end of range (default = 1)
+.TP
+.BR C
+increment (default = 1)
+.TP
+.BR \-h ", " \-\-help
+print usage information and exit
+.SH EXAMPLES
+.PP
+.nf
+range 10
+0 1 2 3 4 5 6 7 8 9
+.fi
+.PP
+.nf
+range 1 11
+1 2 3 4 5 6 7 8 9 10
+.fi
+.PP
+.nf
+range 5 101 5
+5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100
+.fi
+.SH EXIT STATUS
+.B range
+always returns zero.
+.SH BUGS
+GitHub Issues:
+.B https://github.com/crithead/range/issues
+.SH AUTHOR
+Gene <gene@crithead.com>
+.SH LICENSE
+CC0
+.B https://creativecommons.org/publicdomain/zero/1.0/
+.SH SEE ALSO
+seq(1)
+
