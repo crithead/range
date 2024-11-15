@@ -37,29 +37,22 @@ pipeline {
                 sh 'cppcheck --xml --xml-version=2 src 2> cppcheck.xml'
             }
         }
-        stage('Manual') {
-            steps {
-                dir ('build') {
-                    sh 'make manual'
-                }
-            }
-        }
-        stage('Package') {
-            steps {
-                dir ('build') {
-                    sh 'make package'
-                }
-            }
-        }
-        stage('Publish') {
-            steps {
-                script {
-                    sh "curl --silent --fail --user '${NEXUS_CREDS}'" +
-                       " --upload-file build/${DIST_FILE}" +
-                       " ${NEXUS_URL}/${STAMP}/${DIST_FILE}"
-                }
-            }
-        }
+        //stage('Package') {
+        //    steps {
+        //        dir ('build') {
+        //            sh 'make package'
+        //        }
+        //    }
+        //}
+        //stage('Publish') {
+        //    steps {
+        //        script {
+        //            sh "curl --silent --fail --user '${NEXUS_CREDS}'" +
+        //               " --upload-file build/${DIST_FILE}" +
+        //               " ${NEXUS_URL}/${STAMP}/${DIST_FILE}"
+        //        }
+        //    }
+        //}
     }
     post {
         always {
